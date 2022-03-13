@@ -5,6 +5,10 @@
 //npm install --save body-parser
 
 
+//npm install multer 
+
+
+//https://www.youtube.com/watch?v=Oo8oNXyrxB0
 
 // nodemon index.js
 
@@ -44,10 +48,14 @@ app.get('/cad', function (req, res){
 });
 
 
+
+
+
 app.post('/add', function (req, res){
     Post.create({
         titulo: req.body.titulo,
-        conteudo: req.body.conteudo
+        conteudo: req.body.conteudo,
+      //  imagem: req.body.file
     }).then(function(){
         //res.send("Post criado com sucesso!")
         res.redirect('/')
